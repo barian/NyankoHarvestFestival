@@ -1,6 +1,9 @@
 var itemsLayer;
 var cart;
 var xSpeed = 0; //カートの移動速度
+var time = 60; //制限時間
+var score = 0; //リンゴの数
+
 
 var touchOrigin; //タッチ開始したときに表示するスプライト
 var touching = false; //タッチしているかFlag
