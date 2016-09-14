@@ -16,6 +16,8 @@ var res = {
   basket2 : "res_cat/M/basket2.png",
   basket3 : "res_cat/M/basket3.png",
   basket4 : "res_cat/M/basket4.png",
+  counter : "res_cat/M/game_counter.png",
+  timer : "res_cat/M/timeleft.png",
 };
 
 var g_resources = [];
