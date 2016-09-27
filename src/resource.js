@@ -22,9 +22,15 @@ var res = {
   number03_png : "res_cat/M/number3.png",
   number02_png : "res_cat/M/number2.png",
   number01_png : "res_cat/M/number1.png",
+<<<<<<< HEAD
   go : "res_cat/M/go.png", 
 =======
 >>>>>>> origin/gh-pages
+=======
+  go : "res_cat/M/go.png",
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
 };
 
 var g_resources = [];

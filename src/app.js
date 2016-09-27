@@ -7,7 +7,11 @@ var time = 60; //制限時間
 var start_timer = 0; //スターと時間
 var second_timer = 0;//秒間にする時間
 =======
+<<<<<<< HEAD
 >>>>>>> origin/gh-pages
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
 var score1 = 0; //リンゴの1桁
 var score2 = 0; //リンゴの2桁
 var score3 = 0; //リンゴの3桁
@@ -17,7 +21,11 @@ var em = 0;
 var countdown = 4;//countdown
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/gh-pages
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
 var touchOrigin; //タッチ開始したときに表示するスプライト
 var touching = false; //タッチしているかFlag
 var touchEnd; //タッチが終了したときに表示するスプライト
@@ -52,7 +60,11 @@ var game = cc.Layer.extend({
     countdown_png.setPosition(size.width/2,size.height/2);
     this.addChild(countdown_png);
 =======
+<<<<<<< HEAD
 >>>>>>> origin/gh-pages
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
     //timerの表示
     var counter = new cc.Sprite(res.timer);
     counter.setScale(0.5);
@@ -121,7 +133,11 @@ var game = cc.Layer.extend({
   }
 =======
     itemsLayer.addChild(item, 1);
+<<<<<<< HEAD
 >>>>>>> origin/gh-pages
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
   },
   removeItem: function(item) {
     itemsLayer.removeChild(item);
@@ -174,7 +190,6 @@ var game = cc.Layer.extend({
     if(countdown > -1 ){
     start_timer++;
       if(start_timer == 70){
-        console.log(countdown-1);
         start_timer = 0;
         countdown--;
           if(countdown == 3) countdown_png.setTexture(res.number02_png);
@@ -186,10 +201,9 @@ var game = cc.Layer.extend({
 
 
     if(countdown < 0){
-      //カウントダウン画像消す
-      countdown_png.setVisible(false);
-
-    //制限時間
+      //countdown_pngを消す
+      this.removeChild(countdown_png);
+    //時間を秒単位にする
     second_timer++;
 
     if(second_timer == 60){
@@ -198,13 +212,18 @@ var game = cc.Layer.extend({
       timeText.setString(time);
     }
     if(time == 0){
-      cc.director.runScene(new GameStartScene()); //リザルトへ
+      //timeがoになったらタイトルへ
+
+      cc.director.runScene(new TitleScene());
     }
   }
   },
 
 });
+<<<<<<< HEAD
 var Item = cc.Sprite.extend ({
+=======
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
 =======
   }
 
@@ -212,12 +231,20 @@ var Item = cc.Sprite.extend ({
 function timer(){
   this.addChild(timeText);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
 var Item = cc.Sprite.extend({
 >>>>>>> origin/gh-pages
   ctor: function() {
     this._super();
     //ランダムに爆弾と果物を生成する
+<<<<<<< HEAD
+    if (Math.random() < 0.2) {
+=======
     if (Math.random() < 0.5) {
+>>>>>>> origin/master
       this.initWithFile(res.bug_png);
       this.isbug = true;
     } else {
@@ -257,7 +284,11 @@ var Item = cc.Sprite.extend({
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/gh-pages
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
       gameLayer.removeItem(this);
 
     }
@@ -272,7 +303,11 @@ var Item = cc.Sprite.extend({
 =======
 
       gameLayer.removeItem(this)
+<<<<<<< HEAD
 >>>>>>> origin/gh-pages
+=======
+>>>>>>> origin/master
+>>>>>>> e9a36157a65d6f4974da3c3bcddf242cc5f4f89a
     }
   }
 });
