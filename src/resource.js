@@ -18,10 +18,13 @@ var res = {
   basket4 : "res_cat/M/basket4.png",
   counter : "res_cat/M/game_counter.png",
   timer : "res_cat/M/timeleft.png",
+<<<<<<< HEAD
   number03_png : "res_cat/M/number3.png",
   number02_png : "res_cat/M/number2.png",
   number01_png : "res_cat/M/number1.png",
   go : "res_cat/M/go.png",
+=======
+>>>>>>> origin/master
 };
 
 var g_resources = [];
