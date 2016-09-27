@@ -10,7 +10,7 @@ var gamehint = cc.Layer.extend({
 
         // タップイベントリスナーを登録する
                 cc.eventManager.addListener({
-                    event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                    event: cc.EventListener.TOUCH_ONE_BY_ONE, 
                     swallowTouches: true,
                     onTouchBegan: this.onTouchBegan,
                     onTouchMoved: this.onTouchMoved,

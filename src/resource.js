@@ -21,7 +21,7 @@ var res = {
   number03_png : "res_cat/M/number3.png",
   number02_png : "res_cat/M/number2.png",
   number01_png : "res_cat/M/number1.png",
-  go : "res_cat/M/go.png",
+  go : "res_cat/M/go.png", 
 };
 
 var g_resources = [];

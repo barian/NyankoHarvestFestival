@@ -14,7 +14,7 @@ var gametitle = cc.Layer.extend({
     var background = new cc.Sprite(res.background_png);
     var size = cc.director.getWinSize();
     background.setPosition(cc.p(size.width / 2.0, size.height / 2.0));
-    var backgroundLayer = cc.Layer.create();
+    var backgroundLayer = cc.Layer.create(); 
     backgroundLayer.addChild(background);
     this.addChild(backgroundLayer);
 

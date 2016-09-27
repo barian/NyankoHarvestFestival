@@ -190,7 +190,7 @@ var game = cc.Layer.extend({
   },
 
 });
-var Item = cc.Sprite.extend({
+var Item = cc.Sprite.extend ({
   ctor: function() {
     this._super();
     //ランダムに爆弾と果物を生成する
