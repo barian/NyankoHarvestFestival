@@ -160,7 +160,6 @@ var game = cc.Layer.extend({
     if(countdown > -1 ){
     start_timer++;
       if(start_timer == 70){
-        console.log(countdown-1);
         start_timer = 0;
         countdown--;
           if(countdown == 3) countdown_png.setTexture(res.number02_png);
@@ -172,10 +171,9 @@ var game = cc.Layer.extend({
 
 
     if(countdown < 0){
-      //カウントダウン画像消す
-      countdown_png.setVisible(false);
-
-    //制限時間
+      //countdown_pngを消す
+      this.removeChild(countdown_png);
+    //時間を秒単位にする
     second_timer++;
 
     if(second_timer == 60){
@@ -184,7 +182,9 @@ var game = cc.Layer.extend({
       timeText.setString(time);
     }
     if(time == 0){
-      cc.director.runScene(new GameStartScene()); //リザルトへ
+      //timeがoになったらタイトルへ
+
+      cc.director.runScene(new TitleScene());
     }
   }
   },
@@ -194,7 +194,7 @@ var Item = cc.Sprite.extend({
   ctor: function() {
     this._super();
     //ランダムに爆弾と果物を生成する
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.2) {
       this.initWithFile(res.bug_png);
       this.isbug = true;
     } else {
