@@ -3,15 +3,21 @@ var cat;
 var basket;
 var xSpeed = 0; //カートの移動速度
 var time = 60; //制限時間
+<<<<<<< HEAD
 var start_timer = 0; //スターと時間
 var second_timer = 0;//秒間にする時間
+=======
+>>>>>>> origin/gh-pages
 var score1 = 0; //リンゴの1桁
 var score2 = 0; //リンゴの2桁
 var score3 = 0; //リンゴの3桁
 var em = 0;
 
+<<<<<<< HEAD
 var countdown = 4;//countdown
 
+=======
+>>>>>>> origin/gh-pages
 var touchOrigin; //タッチ開始したときに表示するスプライト
 var touching = false; //タッチしているかFlag
 var touchEnd; //タッチが終了したときに表示するスプライト
@@ -40,10 +46,13 @@ var game = cc.Layer.extend({
     backgroundLayer.addChild(background);
     this.addChild(backgroundLayer);
 
+<<<<<<< HEAD
     //countdownを表示させる
     countdown_png = cc.Sprite.create(res.number03_png);
     countdown_png.setPosition(size.width/2,size.height/2);
     this.addChild(countdown_png);
+=======
+>>>>>>> origin/gh-pages
     //timerの表示
     var counter = new cc.Sprite(res.timer);
     counter.setScale(0.5);
@@ -106,9 +115,13 @@ var game = cc.Layer.extend({
   },
   addItem: function() {
     var item = new Item();
+<<<<<<< HEAD
     if(countdown < 0){
     itemsLayer.addChild(item, 1);
   }
+=======
+    itemsLayer.addChild(item, 1);
+>>>>>>> origin/gh-pages
   },
   removeItem: function(item) {
     itemsLayer.removeChild(item);
@@ -156,6 +169,7 @@ var game = cc.Layer.extend({
     if(score2 == 2 && score3 == 0)basket.initWithFile(res.basket2);
     if(score2 == 4 && score3 == 0)basket.initWithFile(res.basket3);
     if(score2 == 8 && score3 == 0)basket.initWithFile(res.basket4);
+<<<<<<< HEAD
     //カウントダウン処理
     if(countdown > -1 ){
     start_timer++;
@@ -191,6 +205,15 @@ var game = cc.Layer.extend({
 
 });
 var Item = cc.Sprite.extend ({
+=======
+  }
+
+});
+function timer(){
+  this.addChild(timeText);
+}
+var Item = cc.Sprite.extend({
+>>>>>>> origin/gh-pages
   ctor: function() {
     this._super();
     //ランダムに爆弾と果物を生成する
@@ -231,17 +254,25 @@ var Item = cc.Sprite.extend ({
     //爆弾の処理　座標をチェックしてカートの接近したら　フルーツより爆弾に当たりやすくしている
     if (this.getPosition().y < 35 && Math.abs(this.getPosition().x - cat.getPosition().x) < 25 &&
       this.isbug) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/gh-pages
       gameLayer.removeItem(this);
 
     }
     //地面に落ちたアイテムは消去
     if (this.getPosition().y < -100) {
+<<<<<<< HEAD
       this.Itemtimer = 60;
       this.Itemtimer--;
       if(this.Itemtimer == 0){
         gameLayer.removeItem(this)
       }
+=======
+
+      gameLayer.removeItem(this)
+>>>>>>> origin/gh-pages
     }
   }
 });
